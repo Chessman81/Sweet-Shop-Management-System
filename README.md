@@ -1,163 +1,108 @@
-� Sweet Shop Management System 
-A Full-Stack Test-Driven Development (TDD) Project with AI Integration 
-�
-� Objective 
-The Sweet Shop Management System is designed to demonstrate full-stack software 
-development skills through a Test-Driven Development (TDD) approach. 
-The project involves designing, building, and testing a complete system for managing sweets, 
-with features like authentication, inventory management, and AI-assisted development 
-workflows. 
-This system integrates backend APIs, frontend implementation, and database operations 
-while maintaining modern development standards and transparency in AI usage. 
-⚙
- ️ Core Features 
-�
-� Backend API (RESTful) 
-A robust backend that serves as the “brain” of the Sweet Shop Management System. 
-Technologies Used: 
- Node.js (with Express) / TypeScript 
- Prisma ORM 
- PostgreSQL Database 
- JWT for secure authentication 
- Jest for testing (TDD) 
-Functionalities: 
- User Authentication 
-o POST /api/auth/register → Register new users 
-o POST /api/auth/login → Login and get JWT token 
- Sweets Management (Protected) 
-o POST /api/sweets → Add a new sweet 
-o GET /api/sweets → View all sweets 
-o GET /api/sweets/search → Search sweets by name, category, or price range 
-o PUT /api/sweets/:id → Update sweet details 
-o DELETE /api/sweets/:id → Delete a sweet (Admin only) 
- Inventory (Protected) 
-o POST /api/sweets/:id/purchase → Purchase a sweet (decreases quantity) 
-o POST /api/sweets/:id/restock → Restock a sweet (Admin only) 
-Each sweet includes: 
-✅ Unique ID | ✅ Name | ✅ Category | ✅ Price | ✅ Quantity in stock 
-�
-� Frontend Application 
-A Single Page Application (SPA) built to interact seamlessly with the backend API. 
-Technologies Used: 
- React.js (Vite) 
- Tailwind CSS 
- Axios 
- React Router 
-Functionalities: 
- User registration and login forms 
- Dashboard displaying all sweets 
- Search and filter sweets 
- Purchase button (disabled when out of stock) 
- Admin interface for CRUD operations 
-Design Focus: 
-Responsive, visually appealing, and user-friendly UI. 
-�
-� Process & Technical Guidelines 
-1
- ️⃣ Test-Driven Development (TDD) 
-All features were implemented following the Red → Green → Refactor cycle: 
- Write failing tests before implementation. 
- Implement minimal code to pass tests. 
- Refactor for clarity and maintainability. 
-Achieved high test coverage and meaningful test cases. 
-2
- ️⃣ Clean Coding Practices 
- Followed SOLID principles 
- Clean, modular, and well-documented code 
- Meaningful variable and function names 
- Detailed inline comments 
-3
- ️⃣ Git & Version Control 
- Used Git for version control 
- Clear, descriptive commits narrating development progress 
- AI co-authorship added where relevant (see below) 
-�
-� My AI Usage 
-AI was used responsibly throughout development to enhance efficiency, not replace 
-understanding. 
-AI Tools Used: 
- ChatGPT (OpenAI GPT-5) 
- GitHub Copilot 
-How AI Was Used: 
- To brainstorm API endpoint structures and routes 
- For generating boilerplate code and validation logic 
- To help write unit tests for service and controller layers 
- For debugging and optimizing performance 
- For writing this README and project documentation 
-Commit Co-Author Example: 
-git commit -m "feat: Implement user registration endpoint 
-Used an AI assistant to generate controller boilerplate and validation logic. 
-Co-authored-by: GPT-5 <AI@users.noreply.github.com>" 
-Reflection: 
-AI helped me speed up repetitive parts and improved my productivity. 
-Every AI-generated piece of code was reviewed, tested, and manually refined. 
-It served as a powerful pair-programmer, allowing me to focus on design and logic. 
-�
-� Installation & Setup Guide 
-�
-� Prerequisites 
-Ensure you have the following installed: 
- Node.js (v18+) 
- npm or yarn 
- PostgreSQL 
- Git 
-⚙
- ️ Backend Setup 
-# Clone the repository 
-git clone https://github.com/<your-username>/sweet-shop-management.git 
-cd sweet-shop-management/backend 
-# Install dependencies 
-npm install 
-Create a .env file: 
-DATABASE_URL=postgresql://user:password@localhost:5432/sweetshop 
-JWT_SECRET=your_jwt_secret 
-PORT=5000 
-Run Prisma migrations: 
-npx prisma migrate dev --name init 
-Start backend server: 
-npm run dev 
-Your backend will run at 👉 http://localhost:5000 
-�
-� Frontend Setup 
-cd ../frontend 
-npm install 
-npm run dev 
-Frontend runs at 👉 http://localhost:51️73️ 
-�
-� Running Tests 
-cd backend 
-npm test 
-�
-� Deliverables 
-1. ✅ Public Git Repository (GitHub/GitLab) 
-2. ✅ Comprehensive README.md (this file) 
-3. ✅ Test Report (Jest test suite results) 
-4. ✅ Screenshots of final UI (insert below) 
-5. 🌐 (Optional) Live Deployment Link (Vercel / Netlify / Render / AWS) 
-�
-� Screenshots (Placeholders) 
-Include screenshots of: 
- Login & Register page 
- Sweets dashboard 
- Admin CRUD panel 
- Purchase confirmation popup 
+# 🍬 Sweet Shop Management System  
+### A Full-Stack Test-Driven Development (TDD) Project with AI Integration  
 
+---
 
-� Optional Deployment 
-You can deploy the system using: 
- Frontend: Vercel / Netlify 
- Backend: Render / Railway / Heroku 
- Database: PostgreSQL on Supabase / Neon.tech 
-�
-� Notes 
- Plagiarism is strictly prohibited — all code was written independently with 
-transparent AI collaboration. 
- This project emphasizes practical application, not perfection. 
- Be prepared to explain key code areas and AI usage decisions during interviews. 
-�
-� Future Enhancements 
- Sweet categories and filters 
- Order history for users 
- Payment integration (Stripe) 
- Dark mode toggle 
- Analytics dashboard for admins 
+## 🎯 Objective  
+The **Sweet Shop Management System** demonstrates full-stack software development skills through a **Test-Driven Development (TDD)** approach.  
+It includes authentication, inventory management, and AI-assisted workflows.  
+This project integrates backend APIs, frontend UI, and database operations with modern best practices and transparent AI usage.  
+
+---
+
+## ⚙️ Core Features  
+
+### 🧠 Backend API (RESTful)  
+A robust backend serving as the “brain” of the Sweet Shop System.  
+
+**Technologies Used:**  
+- Node.js (Express) + TypeScript  
+- Prisma ORM  
+- PostgreSQL  
+- JWT Authentication  
+- Jest (for testing)  
+
+**Functionalities:**  
+#### 🧍‍♀️ User Authentication  
+- `POST /api/auth/register` → Register new users  
+- `POST /api/auth/login` → Login and receive JWT  
+
+#### 🍭 Sweets Management (Protected)  
+- `POST /api/sweets` → Add new sweet  
+- `GET /api/sweets` → View all sweets  
+- `GET /api/sweets/search` → Search sweets by name, category, or price  
+- `PUT /api/sweets/:id` → Update sweet details  
+- `DELETE /api/sweets/:id` → Delete a sweet (Admin only)  
+
+#### 📦 Inventory Management (Protected)  
+- `POST /api/sweets/:id/purchase` → Purchase a sweet (reduce stock)  
+- `POST /api/sweets/:id/restock` → Restock a sweet (Admin only)  
+
+Each sweet includes:  
+✅ **Unique ID** | ✅ **Name** | ✅ **Category** | ✅ **Price** | ✅ **Quantity**
+
+---
+
+### 💻 Frontend Application  
+A single-page React app that interacts seamlessly with the backend API.  
+
+**Technologies Used:**  
+- React.js (Vite)  
+- Tailwind CSS  
+- Axios  
+- React Router  
+
+**Functionalities:**  
+- User registration and login  
+- Dashboard displaying sweets  
+- Search and filter sweets  
+- Purchase button (disabled when out of stock)  
+- Admin CRUD operations  
+
+**Design Focus:**  
+Responsive, visually appealing, and user-friendly.
+
+---
+
+## 🧪 Process & Technical Guidelines  
+
+### 1️⃣ Test-Driven Development (TDD)  
+Followed the **Red → Green → Refactor** cycle:  
+- Write failing tests  
+- Implement minimal code to pass  
+- Refactor for maintainability  
+
+✅ Achieved high test coverage with meaningful test cases.
+
+### 2️⃣ Clean Coding Practices  
+- Followed **SOLID** principles  
+- Modular, well-documented code  
+- Meaningful variable and function names  
+- Inline documentation  
+
+### 3️⃣ Git & Version Control  
+- Used Git for version tracking  
+- Clear, descriptive commits  
+- AI co-authorship where relevant  
+
+---
+
+## 🤖 My AI Usage  
+
+AI was used responsibly to improve **efficiency** without replacing understanding.  
+
+**AI Tools Used:**  
+- ChatGPT (OpenAI GPT-5)  
+- GitHub Copilot  
+
+**How AI Helped:**  
+- Brainstorming API routes and structures  
+- Generating boilerplate & validation logic  
+- Writing unit tests  
+- Debugging & optimization  
+- Creating documentation  
+
+**Commit Example:**  
+```bash
+git commit -m "feat: Implement user registration endpoint  
+Co-authored-by: GPT-5 <AI@users.noreply.github.com>"
