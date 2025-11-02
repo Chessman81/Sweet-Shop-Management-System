@@ -101,8 +101,94 @@ AI was used responsibly to improve **efficiency** without replacing understandin
 - Writing unit tests  
 - Debugging & optimization  
 - Creating documentation  
+Installation & Setup
+🔧 Prerequisites
 
-**Commit Example:**  
-```bash
-git commit -m "feat: Implement user registration endpoint  
-Co-authored-by: GPT-5 <AI@users.noreply.github.com>"
+
+
+Node.js (v18+)
+
+npm or yarn
+
+PostgreSQL
+
+Git
+
+⚙️ Backend Setup
+# Clone the repository
+git clone https://github.com/<your-username>/Sweet-Shop-Management-System.git
+cd sweet-shop-management-system/backend
+
+# Install dependencies
+npm install
+
+# Create .env file
+DATABASE_URL=postgresql://user:password@localhost:5432/sweetshop  
+JWT_SECRET=your_jwt_secret  
+PORT=5000
+
+# Run Prisma migrations
+npx prisma migrate dev --name init
+
+# Start the backend
+npm run dev
+
+
+👉 Backend runs at http://localhost:5000
+
+💅 Frontend Setup
+cd ../frontend
+npm install
+npm run dev
+
+
+👉 Frontend runs at http://localhost:4000
+
+🧩 Running Tests
+cd backend
+npm test
+
+📦 Deliverables
+
+✅ Public Git Repository
+✅ Comprehensive README (this file)
+✅ Jest Test Report
+✅ Screenshots of UI
+
+
+🖼️ Screenshots
+
+Include screenshots of:
+
+Login & Register Page
+
+Dashboard
+
+Admin CRUD Panel
+
+Purchase Confirmation Popup
+
+☁️ Optional Deployment
+
+Frontend: Vercel / Netlify
+
+Backend: Render / Railway / Heroku
+
+Database: Supabase / Neon.tech
+
+
+
+🚀 Future Enhancements
+
+Sweet categories & filters
+
+Order history per user
+
+Payment gateway (Stripe)
+
+Dark mode
+
+Admin analytics dashboard
+
+
+
